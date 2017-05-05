@@ -6,3 +6,5 @@ Extensions include:
 - Implementing sound effects and music
 - Creating a main menu screen with options
 - Adding more animations
+
+![Image of Yaktocat](http://adamsr.me/minecraft-2d/assets/screenshots/capture1.PNG)
