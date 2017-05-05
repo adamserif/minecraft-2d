@@ -20,13 +20,12 @@ DIRT, GRASS, WATER, COAL = 0, 1, 2, 3
 
 playerPos = [0,0]
 
-# Dictionary of the form resource : texture
+# Dictionary mapping resources to textures
 textures = {
-	DIRT : pygame.image.load('dirt.png'),
-	GRASS : pygame.image.load('grass.png'),
-	WATER : pygame.image.load('water.png'),
-	COAL : pygame.image.load('coal.png')}
-
+	DIRT : pygame.image.load('assets/textures/dirt.png'),
+	GRASS : pygame.image.load('assets/textures/grass.png'),
+	WATER : pygame.image.load('assets/textures/water.png'),
+	COAL : pygame.image.load('assets/textures/coal.png')}
 
 inventory = {
 	DIRT : 0,
@@ -39,15 +38,14 @@ inventory = {
 # of resources (b) form a tilemap
 resources = [DIRT, GRASS, WATER, COAL]
 tilemap = [[DIRT for w in range(MAPWIDTH)]
-			for h in range(MAPHEIGHT)]
-
+			     for h in range(MAPHEIGHT)]
 
 pygame.init()
 DSURFACE = pygame.display.set_mode((x_dim, y_dim + 50))
-PLAYER = pygame.image.load('player.png').convert_alpha(DSURFACE)
+PLAYER = pygame.image.load('assets/textures/player.png').convert_alpha(DSURFACE)
 pygame.display.set_caption('Tile Heaven')
 
-INVFONT = pygame.font.Font('OpenSans-Regular.ttf',18)
+INVFONT = pygame.font.Font('assets/fonts/OpenSans-Regular.ttf',18)
 
 for row in range(MAPHEIGHT):
 	for col in range(MAPWIDTH):
@@ -71,16 +69,13 @@ while True:
 			pygame.quit()
 			sys.exit()
 		elif event.type == KEYDOWN:
-
+			# Directional movement, accounts for game screen bounding box
 			if (event.key == K_RIGHT) and (playerPos[0] < MAPWIDTH - 1):
 				playerPos[0] += 1
-
 			if (event.key == K_LEFT) and (playerPos[0] > 0):
 				playerPos[0] -= 1
-
 			if (event.key == K_UP) and (playerPos[1] > 0):
 				playerPos[1] -= 1
-
 			if (event.key == K_DOWN) and (playerPos[1] < MAPHEIGHT -1):
 				playerPos[1] += 1
 
@@ -106,7 +101,6 @@ while True:
 		DSURFACE.blit(PLAYER,
 					   (playerPos[0]*TILESIZE,
 					   	playerPos[1]*TILESIZE))
-
 
 		placePosition = 10
 		for item in resources:
