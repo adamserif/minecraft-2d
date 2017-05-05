@@ -7,4 +7,6 @@ Extensions include:
 - Creating a main menu screen with options
 - Adding more animations
 
+You can check out my main website [here](https://www.adamsr.me) for other stuff I'm working on.
+
 ![Image of Yaktocat](http://adamsr.me/minecraft-2d/assets/screenshots/capture1.PNG)
