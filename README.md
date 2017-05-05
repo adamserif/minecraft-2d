@@ -7,6 +7,6 @@ Extensions include:
 - Creating a main menu screen with options
 - Adding more animations
 
-You can check out my main website [here](www.adamsr.me) for other stuff I'm working on.
+You can check out my main website [here](http://www.adamsr.me) for other stuff I'm working on.
 
 ![](http://adamsr.me/tileheaven/assets/screenshots/capture1.PNG)
